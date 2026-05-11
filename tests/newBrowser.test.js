@@ -54,20 +54,16 @@ describe('Clicking "Poppa stacken!"', () => {
 
 // Efter att ha poppat ett element ska rätt värde visas när man peekar
 test('Clicking "Vad finns överst på stacken?" should return correct element after pop', async() => {
-    // Hämtar push-knappen och klickar
+    // Pushar "1" till stacken
     let push = await driver.findElement(By.id('push'));
     await push.click();
-
-    // Förväntas en alert-funktion där vi skriver in värdet "1" och accepterar
     let alertPush = await driver.switchTo().alert();
     await alertPush.sendKeys("1");
     await alertPush.accept();
 
-    // Letar upp pop-knappen och klickar
+    // Poppar översta elementet i stacken
     let pop = await driver.findElement(By.id('pop'));
     await pop.click();
-
-    // Förväntas alert-funktion och accepterar
     let alertPop = await driver.switchTo().alert();
     await alertPop.accept();
 
