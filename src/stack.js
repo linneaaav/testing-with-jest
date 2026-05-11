@@ -9,7 +9,7 @@ exports.push = function(x){
 
 // Returnerar de översta elementen i stacken och tar bort det
 exports.pop = function(){
-    stack.pop()
+    return stack.pop()
 };
 
 // Returnerar de översta elementet i stacken
