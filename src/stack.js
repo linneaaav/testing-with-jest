@@ -1,5 +1,5 @@
 // Importerar modulen Underscore.js
-const_ = require('underscore');
+const _ = require('underscore');
 let stack = [];
 
 // Lägger ett element överst i stacken
